@@ -1,12 +1,46 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import RadioSelection from "./RadioSelection";
+import {ThemeProvider} from 'styled-components'
 
 let choice = false
 
+export const Standard =  {
+  colors: {
+      // abstract
+      primary: "#ebe6e6",
+
+      // specific
+      background: "#e8e8e8",
+      button: "#CAB5B5",
+      buttonSelected: "white",
+      p: "#86888B",
+      selected: "#cab5b5",
+      unselected: "#707070",
+      selectedHighlight: "c9a5a5",
+      unselectedHighlight: "white",
+
+      // per element
+      //inputBackground: this.colors.primary
+  },
+  borders: {
+      primary: "2px #ebe6e6 solid",
+      secondary: "1px #86888B solid",
+      navButton: "2px gray solid",
+      button: "2px gray outset"
+  },
+  fonts: {
+      title: "'Merriweather',serif",
+      subtitle: "'Segoe UI','Roboto',serif",
+      bio: "'Roboto',serif",
+      button: "'Roboto',serif",
+      p: "'Roboto', serif"
+  }
+}
+
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "ReactComponentLibrary/RadioSelection",
+  title: "RadioSelection",
   component: RadioSelection,
 } as ComponentMeta<typeof RadioSelection>;
 
@@ -27,3 +61,31 @@ ClickMe.args = {
 ],
   select: (e: string) => console.log("changed")
 };
+
+export const RadioLoaded = () => {
+
+
+
+  const [selections, setSelections] = React.useState([{selected: false, title: 'hello world', name: 'helloWorld'},
+  {selected: true, title: 'Choose me', name: 'choice'}
+])
+
+  const makeSelection = (e: any) => {
+    console.log(e)
+    if (e) {
+      setSelections ( prev => {
+        let newSelections = [...prev]
+        return newSelections.map( s => {
+          if (s.name === e) s.selected = true;
+          else s.selected = false
+          return s 
+        })
+      })
+    }
+  }
+
+  return <ThemeProvider theme={Standard}>
+    <RadioSelection selections={selections} select={ makeSelection } />
+  </ThemeProvider>
+
+}
