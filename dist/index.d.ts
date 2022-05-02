@@ -13,4 +13,14 @@ declare const Rs: (props: {
 
 declare const Switch: (props: any) => JSX.Element;
 
-export { Rs as RadioSelection, Switch };
+declare const Field: (props: {
+    value: string;
+    select: any;
+}) => JSX.Element;
+
+declare const Select: (props: {
+    selections: Array<Selections>;
+    select: any;
+}) => JSX.Element;
+
+export { Field, Rs as RadioSelection, Select, Switch };
