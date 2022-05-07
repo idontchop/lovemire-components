@@ -23,4 +23,6 @@ declare const Select: (props: {
     select: any;
 }) => JSX.Element;
 
-export { Field, Rs as RadioSelection, Select, Switch };
+declare const NavButton: (props: navButtonProps) => JSX.Element;
+
+export { Field, NavButton, Rs as RadioSelection, Select, Switch };
