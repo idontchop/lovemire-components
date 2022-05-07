@@ -5,6 +5,7 @@ const NavSelectButton = styled.div`
 outline: none;
 box-sizing: border-box;
 width: 100%;
+height: 100%;
 border-radius: 0;
 border: none;
 padding: 8px;
@@ -29,7 +30,9 @@ p {
 
 const NavSelectedButton = styled.div`
 outline: none;
+box-sizing: border-box;
 width: 80%;
+height: 95%;
 border-radius: 20px;
 border: none;
 padding: 5px;
@@ -56,12 +59,14 @@ p {
 const NavUnSelectedWrapper = styled.div`
     padding: 5px;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
 `
 
 const ChildrenDiv = styled.div`
     display: flex;
     width: 100%;
+    height: 100%;
     
     span {
         margin: auto;
@@ -113,7 +118,7 @@ export const NavButton = (props: navButtonProps) => {
                         {props.notifications && props.notifications.length > 1 &&
                         <NotificationBubble>{props.notifications[1]}</NotificationBubble>}
                     </ChildrenDiv>}
-                {!props.showNotificationsOnSelected && <span>{props.children}</span>}
+                {!props.showNotificationsOnSelected && <ChildrenDiv><span>{props.children}</span></ChildrenDiv>}
                 </NavSelectedButton>
             </NavUnSelectedWrapper>
     } else {

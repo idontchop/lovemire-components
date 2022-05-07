@@ -22,7 +22,9 @@ export const Switcher = () => {
   const [value,setValue] = React.useState(false)
   return <ThemeProvider theme={Standard}>
       <div style={{width: '120px'}}>
+          <div style={{height: '8vh'}}>
     <NavButton notifications={[59,22233333322]} selected={value} onClick={() => setValue(!value)} >Flirt</NavButton>
+    </div>
     <NavButton  notifications={[5,22233333322]} selected={!value} onClick={() => setValue(!value)} >Flirt on the big title</NavButton>
     </div>
 
