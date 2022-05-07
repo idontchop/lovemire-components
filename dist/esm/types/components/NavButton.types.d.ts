@@ -3,4 +3,5 @@ declare type navButtonProps = {
     onClick?: any;
     notifications?: number[];
     children?: any;
+    showNotificationsOnSelected?: boolean;
 };
