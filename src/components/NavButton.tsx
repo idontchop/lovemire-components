@@ -15,6 +15,7 @@ background-color: white;
 box-shadow: inset 0 -2px 5px #CAB5B5;
 color: #707070;
 text-align: center;
+cursor: pointer;
 
 @media (max-width: 600px) {
     font-size: 0.8em;
@@ -122,7 +123,7 @@ export const NavButton = (props: navButtonProps) => {
                 </NavSelectedButton>
             </NavUnSelectedWrapper>
     } else {
-        return <NavSelectButton onClick={() => props.onClick() }>
+        return <NavSelectButton onClick={() => props.onClick && props.onClick() }>
                 <ChildrenDiv>
 
                     {props.notifications && props.notifications.length > 0 &&
