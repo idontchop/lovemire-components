@@ -43,6 +43,10 @@ export const Standard =  {
   }
 }
 
+export const EmptyTheme = {
+  
+}
+
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "RadioSelection",
