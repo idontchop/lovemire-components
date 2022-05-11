@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {useTheme} from 'styled-components'
 import { LeftArrowButton, DownArrowButton } from './Buttons'
 
 const StyledExpandableWrapper = styled.div`
@@ -50,6 +50,10 @@ export const CollaspableMenu = (props: {title?: string, children?: any, expanded
 
     const [expanded, setExpanded] = React.useState(false)
 
+    const theme = useTheme()
+
+
+    console.log(theme)
     return (
         <StyledExpandableWrapper>
             <StyledBar>
