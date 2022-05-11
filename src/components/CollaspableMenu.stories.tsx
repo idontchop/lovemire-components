@@ -11,7 +11,7 @@ export default {
 
 export const Collaspable = () => {
 
-    return <ThemeProvider theme={EmptyTheme}>
+    return <ThemeProvider theme={Standard}>
     <CollaspableMenu title="Collaspable Menu" expanded={false}>
         <div><h1>Some Menu</h1><p>Content</p></div>
     </CollaspableMenu>

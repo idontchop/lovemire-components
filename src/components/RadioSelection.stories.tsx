@@ -10,6 +10,7 @@ export const Standard =  {
       // abstract
       primary: "#ebe6e6",
       secondary: "#707070",
+      test: 'purple',
 
       // specific
       background: "#e8e8e8",
@@ -44,7 +45,7 @@ export const Standard =  {
 }
 
 export const EmptyTheme = {
-  
+
 }
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
