@@ -23,7 +23,7 @@ const StyledBar = styled.div`
         color: ${props => props.theme?.colors?.title ? props.theme.colors.title : '#707070'};
         font-size: 1.2em;
         font-weight: normal;
-        font-family: ${props => props.theme?.fonts?.subtitle ? props.theme.fonts.subtitle : 'serif'};
+        font-family: ${props => props.theme?.fonts?.titleScript ? props.theme.fonts.titleScript : 'serif'};
         display: inline-block;
         margin: auto auto auto 15px;
         flex-grow: 1;
