@@ -25,4 +25,14 @@ declare const Select: (props: {
 
 declare const NavButton: (props: navButtonProps) => JSX.Element;
 
-export { Field, NavButton, Rs as RadioSelection, Select, Switch };
+/**
+ * Buttons from lovemire/styles/Buttons.js
+ *
+ * @param props
+ * @returns
+ */
+declare const RightArrowButton: (props: buttonProps) => JSX.Element;
+declare const DownArrowButton: (props: buttonProps) => JSX.Element;
+declare const LeftArrowButton: (props: buttonProps) => JSX.Element;
+
+export { DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, RightArrowButton, Select, Switch };

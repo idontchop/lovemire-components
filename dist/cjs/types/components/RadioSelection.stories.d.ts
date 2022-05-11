@@ -3,7 +3,10 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 export declare const Standard: {
     colors: {
         primary: string;
+        secondary: string;
         background: string;
+        secondaryBackground: string;
+        title: string;
         button: string;
         buttonSelected: string;
         p: string;
@@ -17,9 +20,11 @@ export declare const Standard: {
         secondary: string;
         navButton: string;
         button: string;
+        expandableMenu: string;
     };
     fonts: {
         title: string;
+        titleScript: string;
         subtitle: string;
         bio: string;
         button: string;
