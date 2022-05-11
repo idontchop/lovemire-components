@@ -4,3 +4,4 @@ export { Field } from "./Field";
 export { Select } from "./Select";
 export { NavButton } from "./NavButton";
 export { LeftArrowButton, RightArrowButton, DownArrowButton } from "./Buttons";
+export { CollaspableMenu } from "./CollaspableMenu";

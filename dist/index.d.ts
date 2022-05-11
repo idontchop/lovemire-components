@@ -35,4 +35,10 @@ declare const RightArrowButton: (props: buttonProps) => JSX.Element;
 declare const DownArrowButton: (props: buttonProps) => JSX.Element;
 declare const LeftArrowButton: (props: buttonProps) => JSX.Element;
 
-export { DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, RightArrowButton, Select, Switch };
+declare const CollaspableMenu: (props: {
+    title?: string | undefined;
+    children?: any;
+    expanded?: boolean | undefined;
+}) => JSX.Element;
+
+export { CollaspableMenu, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, RightArrowButton, Select, Switch };
