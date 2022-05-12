@@ -119,6 +119,10 @@ export const ConfigurableButton = (props: ConfigurableButtonProps) => {
      */
     useEffect( () => {
 
+        if ( props.selected ) {
+            setSelected(true)
+        }
+
         if ( props.selectedBy ) {
 
             // selectedBy.hold must be between 0 and 10 seconds
