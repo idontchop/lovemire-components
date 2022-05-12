@@ -1,6 +1,7 @@
 /// <reference types="react" />
 declare type ConfigurableButtonProps = {
     className?: string;
+    style?: any;
     selected?: boolean;
     onKeyDown?: () => void;
     onSelected: (arg?: boolean) => void;

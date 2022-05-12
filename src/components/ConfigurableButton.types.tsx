@@ -1,5 +1,6 @@
 type ConfigurableButtonProps = {
     className?: string,
+    style?: any,
     /* allows for styling with styled-components */
     selected?: boolean,
     /* sets status of button */

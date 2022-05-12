@@ -144,6 +144,7 @@ export const ConfigurableButton = (props: ConfigurableButtonProps) => {
     },[props])
 
     return <StyledButton className={props.className && props.className}
+        style={props.style && props.style}
         hold={isHeld}
         duration={props.selectedBy?.blinkDuration ? 
             props.selectedBy.blinkDuration : props.selectedBy?.hold ? props.selectedBy.hold :
