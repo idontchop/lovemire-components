@@ -3,6 +3,7 @@ declare type CallaspableMenuProps = {
     children?: any;
     className?: string;
     expanded?: boolean;
+    expandedCallBack?: any;
 };
 declare type ContentDivProps = {
     expanded?: boolean;

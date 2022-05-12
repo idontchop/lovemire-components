@@ -10,6 +10,7 @@ export const Standard =  {
       // abstract
       primary: "#ebe6e6",
       secondary: "#707070",
+      text: "#282c34",
       test: 'purple',
 
       // specific

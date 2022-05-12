@@ -4,6 +4,7 @@ export declare const Standard: {
     colors: {
         primary: string;
         secondary: string;
+        text: string;
         test: string;
         background: string;
         secondaryBackground: string;
