@@ -32,7 +32,8 @@ export const Standard =  {
       secondary: "1px #86888B solid",
       navButton: "2px gray solid",
       button: "2px gray outset",
-      expandableMenu: "2px #707070 solid"
+      expandableMenu: "2px #707070 solid",
+      insideMenu: "2px #707070 solid"
   },
   fonts: {
       title: "'Merriweather',serif",

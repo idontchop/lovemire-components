@@ -6,6 +6,7 @@ const Wrapper = styled.div`
     height: 20px;
     width: 40px;
     display: inline-block;
+    cursor: pointer;
 `
 
 const Bar = styled.span<SelectDivProps>`

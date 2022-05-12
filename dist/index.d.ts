@@ -34,11 +34,15 @@ declare const NavButton: (props: navButtonProps) => JSX.Element;
 declare const RightArrowButton: (props: buttonProps) => JSX.Element;
 declare const DownArrowButton: (props: buttonProps) => JSX.Element;
 declare const LeftArrowButton: (props: buttonProps) => JSX.Element;
+declare const ReloadButton: (props: bigButtonProps) => JSX.Element;
 
-declare const CollaspableMenu: (props: {
-    title?: string | undefined;
-    children?: any;
-    expanded?: boolean | undefined;
-}) => JSX.Element;
+/**
+ * TODO: animation... problem is we don't know the width so we'd have to look at the children
+ * and calculate in order to have a fluid transition. scaleY is a quick hack
+ *
+ * @param props
+ * @returns
+ */
+declare const CollaspableMenu: (props: CallaspableMenuProps) => JSX.Element;
 
-export { CollaspableMenu, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, RightArrowButton, Select, Switch };
+export { CollaspableMenu, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, Switch };

@@ -4,7 +4,9 @@ import { LeftArrowButton, DownArrowButton } from './Buttons'
 
 const StyledExpandableWrapper = styled.div`
     width: 100%;
-
+    padding: 2%;
+    box-sizing: border-box;
+    cursor: pointer;
 
 `
 
@@ -36,36 +38,56 @@ const StyledBar = styled.div`
 
 `
 
-const StyledContentWrapper = styled.div`
+const StyledContentWrapper = styled.div<ContentDivProps>`
     box-sizing: border-box;
-    border: ${props => props.theme?.borders?.expandableMenu ? props.theme.borders.expandableMenu : '2px #303030 solid'};
-    background-color: ${props => props.theme?.colors?.secondaryBackground ? props.theme.colors.secondaryBackground : '#e0e0e0'};
+    border: 0;
+    background-color: inherit;
     border-radius: 5px;
-    min-height: 1px;
     width: 100%;
     overflow: hidden;
+    transform-origin: top;
+    transition:transform 0.3s ease-out;
+    ${props => props.expanded ? `transform: scaleY(1);`
+    : `transform: scaleY(0);` }
+`
+const StyledContentBorder = styled.div`
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: ${props => props.theme?.borders?.expandableMenu ? props.theme.borders.expandableMenu : '2px #303030 solid'};
+    background-color: ${props => props.theme?.colors?.secondaryBackground ? props.theme.colors.secondaryBackground : '#e0e0e0'};
+    width: 100%;
+    overflow: hidden;
+
 `
 
-export const CollaspableMenu = (props: {title?: string, children?: any, expanded?: boolean}) => {
+/**
+ * TODO: animation... problem is we don't know the width so we'd have to look at the children
+ * and calculate in order to have a fluid transition. scaleY is a quick hack
+ * 
+ * @param props 
+ * @returns 
+ */
+export const CollaspableMenu = (props: CallaspableMenuProps) => {
 
     const [expanded, setExpanded] = React.useState(false)
 
     const theme = useTheme()
 
-
-    console.log(theme)
     return (
-        <StyledExpandableWrapper>
+        <StyledExpandableWrapper className={props.className ? props.className : ""}
+            onClick={ () => setExpanded(!expanded)}>
             <StyledBar>
                 <h2>{props.title ? props.title : 'Menu Item'}</h2>
-                { expanded && <DownArrowButton onClick={() => setExpanded(false)} /> }
-                { !expanded && <LeftArrowButton onClick={() => setExpanded(true)} /> }
+                { expanded && <DownArrowButton  /> }
+                { !expanded && <LeftArrowButton /> }
             </StyledBar>
-            {props.children && expanded ? 
-                <StyledContentWrapper>
-                    {props.children}
-                </StyledContentWrapper>
-            : <StyledContentWrapper> </StyledContentWrapper>}
+            <StyledContentBorder>
+                {props.children && expanded ? 
+                    <StyledContentWrapper expanded={expanded}>
+                        {props.children}
+                    </StyledContentWrapper>
+                : <StyledContentWrapper> </StyledContentWrapper>}
+            </StyledContentBorder>
 
 
         </StyledExpandableWrapper>

@@ -22,6 +22,7 @@ export declare const Standard: {
         navButton: string;
         button: string;
         expandableMenu: string;
+        insideMenu: string;
     };
     fonts: {
         title: string;
