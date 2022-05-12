@@ -41,6 +41,7 @@ const StyledReloadButton = styled.button`
     border: ${props => props.theme?.borders?.expandableMenu ? props.theme.borders.expandableMenu : '2px #303030 solid'};
     background-color: ${props => props.theme?.colors?.primary ? props.theme.colors.primary : 'darkseagreen'};
     color: ${props => props.theme?.colors?.secondary ? props.theme.colors.secondary : '#707070'};
+    cursor: pointer;
 `
 
 /**
