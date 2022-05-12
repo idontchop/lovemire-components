@@ -22,7 +22,7 @@ export const Standard =  {
       p: "#86888B",
       selected: "#cab5b5",
       unselected: "#707070",
-      selectedHighlight: "c9a5a5",
+      selectedHighlight: "#c9a5a5",
       unselectedHighlight: "white",
 
       // per element

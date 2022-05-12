@@ -5,3 +5,4 @@ export { Select } from "./Select";
 export { NavButton } from "./NavButton";
 export { LeftArrowButton, RightArrowButton, DownArrowButton, ReloadButton } from "./Buttons";
 export { CollaspableMenu } from "./CollaspableMenu";
+export { ConfigurableButton } from "./ConfigurableButton";

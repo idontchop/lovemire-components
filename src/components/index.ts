@@ -8,3 +8,4 @@ export {    LeftArrowButton,
             DownArrowButton, 
             ReloadButton } from "./Buttons"
 export { CollaspableMenu } from "./CollaspableMenu"
+export { ConfigurableButton } from "./ConfigurableButton"

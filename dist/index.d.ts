@@ -45,4 +45,6 @@ declare const ReloadButton: (props: bigButtonProps) => JSX.Element;
  */
 declare const CollaspableMenu: (props: CallaspableMenuProps) => JSX.Element;
 
-export { CollaspableMenu, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, Switch };
+declare const ConfigurableButton: (props: ConfigurableButtonProps) => JSX.Element;
+
+export { CollaspableMenu, ConfigurableButton, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, Switch };
