@@ -24,8 +24,9 @@ export const Collaspable = () => {
 
     return <ThemeProvider theme={Standard}>
     <ConfigurableButton
+        style={{}}
         onSelected={ onSelected }
-        selectedBy={{hold: 3, doubleClick: false, unSelectedable: true}}
+        selectedBy={{hold: 3, doubleClick: true, unSelectedable: false}}
         onSelectedChildren={<div><h1>T</h1></div>}
         //keyDownChildren={<div><h1>O</h1></div>}
         >

@@ -121,6 +121,8 @@ export const ConfigurableButton = (props: ConfigurableButtonProps) => {
 
         if ( props.selected ) {
             setSelected(true)
+        } else {
+            setSelected(false)
         }
 
         if ( props.selectedBy ) {
