@@ -44,7 +44,7 @@ const StyledReloadButton = styled.button`
     cursor: pointer;
 `
 
-export const SelectButton = styled.button<selectButtonProps>`
+export const StyledSelectButton = styled.button<styledSelectButtonProps>`
     outline: none;
     border-radius: 5px;
     border: ${props => props.theme.borders.button};
@@ -52,10 +52,12 @@ export const SelectButton = styled.button<selectButtonProps>`
     margin: 0px 3px;
     font-size: 0.6em;
     font-family: 'Roboto', serif;
-    background-color: ${props => props.selected ? props.theme.colors.buttonSelected : props.theme.colors.button};
+    background-color: ${props => props.selected ? 
+        '#a2dbc6' : props.theme.colors.button};
     color: black;
-    ${props => !props.selected && `box-shadow: 1px 2px 2px #707070;`}
+    ${props => !props.selected && `box-shadow: 1px 3px 1px #707070;`}
 
+    
 
     @media (max-width: 600px) {
         font-size: 0.8em;
@@ -73,11 +75,7 @@ export const SelectButton = styled.button<selectButtonProps>`
         padding: 2px;
     }
 
-    
-    &:after {
-        font-size: 1.5em;
-        content: ${props => props.selected ? '"✔"' : '"☐"'};
-    }
+
 
 `
 
@@ -107,4 +105,16 @@ export const ReloadButton = (props: bigButtonProps) => {
         onClick={() => props.onClick()}>
             {props.children}
         </StyledReloadButton>
+}
+
+export const SelectButton = (props: selectButtonProps) => {
+
+    return <StyledSelectButton selected={props.selected} onClick={props.onClick}>
+        <div style={{display: "flex"}}>
+            <p style={{fontSize: '1.2em'}}>{props.children}</p>
+            <p style={{margin: "auto", fontSize: '2.2em'}}>
+                {props.selected ? '✔' : <input type="checkbox" />}
+            </p>
+        </div>
+    </StyledSelectButton>
 }

@@ -14,5 +14,12 @@ type bigButtonProps = {
 }
 
 type selectButtonProps = {
+    selected: boolean,
+    children: string,
+    onClick: any,
+    className?: string,
+}
+
+type styledSelectButtonProps = {
     selected: boolean
 }

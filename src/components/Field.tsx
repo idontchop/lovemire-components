@@ -15,6 +15,21 @@ const StyledInput = styled.input`
     -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
 `
 
+const StyledTextArea = styled.textarea`
+    height: 40px;
+    width: 90%;
+    resize: vertical;
+    margin: 0;
+    border: ${props => props?.theme?.colors?.p ? props.theme.colors.p : "blue"} 1px solid;
+    padding: 5px;
+    background-color: ${props => props?.theme?.colors?.primary ? props.theme.colors.primary : "lightblue"};
+    color: ${props => props?.theme?.colors?.p ? props.theme.colors.p : "black"};
+    border-radius: 5px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
+`
+
 export const Field = (props: {value: string, select: any}) => {
 
     return <StyledInput 
@@ -22,4 +37,14 @@ export const Field = (props: {value: string, select: any}) => {
         value={props.value ? props.value : ""} />
 
 
+}
+
+/**
+ * @todo Make expandable.
+ * 
+ * @param props 
+ */
+export const TextArea = (props: {children: string}) => {
+
+    return <StyledTextArea>{props.children}</StyledTextArea>
 }

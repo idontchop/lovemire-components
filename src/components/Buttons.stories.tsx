@@ -19,7 +19,7 @@ export const SelectMe = () => {
     return <ThemeProvider theme={Standard}>
      <SelectButton 
         onClick={ () => setvalue(!value)}
-        selected={value}><p>Click me!</p></SelectButton>
+        selected={value}>Click me!</SelectButton>
   </ThemeProvider>
 
 

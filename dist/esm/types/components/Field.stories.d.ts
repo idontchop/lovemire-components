@@ -10,3 +10,4 @@ export declare const HelloWorld: ComponentStory<(props: {
     select: any;
 }) => JSX.Element>;
 export declare const Input: () => JSX.Element;
+export declare const BigInput: () => JSX.Element;
