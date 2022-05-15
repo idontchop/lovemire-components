@@ -17,7 +17,7 @@ export const SelectMe = () => {
     const [value, setvalue] = React.useState(false)
 
     return <ThemeProvider theme={Standard}>
-     <SelectButton 
+     <SelectButton noCheckBox noCheckMark
         onClick={ () => setvalue(!value)}
         selected={value}>Click me!</SelectButton>
   </ThemeProvider>

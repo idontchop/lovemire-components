@@ -18,6 +18,8 @@ type selectButtonProps = {
     children: string,
     onClick: any,
     className?: string,
+    noCheckBox?: boolean,
+    noCheckMark?: boolean
 }
 
 type styledSelectButtonProps = {

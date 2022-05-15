@@ -57,22 +57,24 @@ export const StyledSelectButton = styled.button<styledSelectButtonProps>`
     color: black;
     ${props => !props.selected && `box-shadow: 1px 3px 1px #707070;`}
 
-    
+    input {
+        height: 13px;
+        width: 13px;
+    }
 
     @media (max-width: 600px) {
         font-size: 0.8em;
     }
 
     p {
-        font-size: 1em;
         font-family: 'Roboto', serif;
-        margin: 1vh;
         display: inline-block;
     }
 
     span {
-        font-size: 0.8em;
-        padding: 2px;
+        font-size: 1.8em;
+        padding: 0 2px;
+        margin: auto;
     }
 
 
@@ -112,9 +114,10 @@ export const SelectButton = (props: selectButtonProps) => {
     return <StyledSelectButton selected={props.selected} onClick={props.onClick}>
         <div style={{display: "flex"}}>
             <p style={{fontSize: '1.2em'}}>{props.children}</p>
-            <p style={{margin: "auto", fontSize: '2.2em'}}>
-                {props.selected ? '✔' : <input type="checkbox" />}
-            </p>
+            <span>
+                {props.selected ? !props.noCheckMark && '✔' : 
+                    !props.noCheckBox && <input type="checkbox" />}
+            </span>
         </div>
     </StyledSelectButton>
 }
