@@ -17,6 +17,14 @@ declare const Field: (props: {
     value: string;
     select: any;
 }) => JSX.Element;
+/**
+ * @todo Make expandable.
+ *
+ * @param props
+ */
+declare const TextArea: (props: {
+    children: string;
+}) => JSX.Element;
 
 declare const Select: (props: {
     selections: Array<Selections>;
@@ -35,6 +43,7 @@ declare const RightArrowButton: (props: buttonProps) => JSX.Element;
 declare const DownArrowButton: (props: buttonProps) => JSX.Element;
 declare const LeftArrowButton: (props: buttonProps) => JSX.Element;
 declare const ReloadButton: (props: bigButtonProps) => JSX.Element;
+declare const SelectButton: (props: selectButtonProps) => JSX.Element;
 
 /**
  * TODO: animation... problem is we don't know the width so we'd have to look at the children
@@ -47,4 +56,4 @@ declare const CollaspableMenu: (props: CallaspableMenuProps) => JSX.Element;
 
 declare const ConfigurableButton: (props: ConfigurableButtonProps) => JSX.Element;
 
-export { CollaspableMenu, ConfigurableButton, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, Switch };
+export { CollaspableMenu, ConfigurableButton, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, SelectButton, Switch, TextArea };
