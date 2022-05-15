@@ -12,3 +12,7 @@ type bigButtonProps = {
     */
     className?: string
 }
+
+type selectButtonProps = {
+    selected: boolean
+}

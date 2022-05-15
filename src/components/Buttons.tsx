@@ -44,6 +44,43 @@ const StyledReloadButton = styled.button`
     cursor: pointer;
 `
 
+export const SelectButton = styled.button<selectButtonProps>`
+    outline: none;
+    border-radius: 5px;
+    border: ${props => props.theme.borders.button};
+    padding: 5px;
+    margin: 0px 3px;
+    font-size: 0.6em;
+    font-family: 'Roboto', serif;
+    background-color: ${props => props.selected ? props.theme.colors.buttonSelected : props.theme.colors.button};
+    color: black;
+    ${props => !props.selected && `box-shadow: 1px 2px 2px #707070;`}
+
+
+    @media (max-width: 600px) {
+        font-size: 0.8em;
+    }
+
+    p {
+        font-size: 1em;
+        font-family: 'Roboto', serif;
+        margin: 1vh;
+        display: inline-block;
+    }
+
+    span {
+        font-size: 0.8em;
+        padding: 2px;
+    }
+
+    
+    &:after {
+        font-size: 1.5em;
+        content: ${props => props.selected ? '"✔"' : '"☐"'};
+    }
+
+`
+
 /**
  * Buttons from lovemire/styles/Buttons.js
  * 
