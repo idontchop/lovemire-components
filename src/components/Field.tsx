@@ -44,7 +44,10 @@ export const Field = (props: {value: string, select: any}) => {
  * 
  * @param props 
  */
-export const TextArea = (props: {children: string}) => {
+export const TextArea = (props: {children: string, onChange: any}) => {
 
-    return <StyledTextArea>{props.children}</StyledTextArea>
+    return <StyledTextArea
+            onChange={ (e) => props.onChange(e.target.value)}>
+            {props.children}
+        </StyledTextArea>
 }

@@ -10,4 +10,5 @@ export declare const Field: (props: {
  */
 export declare const TextArea: (props: {
     children: string;
+    onChange: any;
 }) => JSX.Element;
