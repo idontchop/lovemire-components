@@ -32,7 +32,7 @@ export const BigInput = () => {
     return <ThemeProvider theme={Standard}>
       <div style={{backgroundColor: 'aqua', overflow: 'none'}}>
       <p>Text Before</p>
-      <TextArea>{value}</TextArea>
+      <TextArea onChange={ (e:any) => setvalue(e.target.value)}>{value}</TextArea>
       <p>TextAfter, expandable over?</p>
       </div>
     </ThemeProvider>
