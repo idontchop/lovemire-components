@@ -43,6 +43,7 @@ const Rs = (props: {selections: Array<Selections>, select: any}) => {
     return (
         <WrapperDiv>
             {props.selections.map( (e: Selections) => <SelectDiv 
+                key={e.name}
                 selected={e.selected}
                 onClick={() => props.select(e.name)}>
                 <p>{e.title}</p>
