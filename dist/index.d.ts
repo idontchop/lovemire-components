@@ -24,6 +24,7 @@ declare const Field: (props: {
  */
 declare const TextArea: (props: {
     children: string;
+    onBlur?: any;
     onChange: any;
 }) => JSX.Element;
 
