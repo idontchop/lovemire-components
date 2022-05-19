@@ -13,21 +13,13 @@ declare const Rs: (props: {
 
 declare const Switch: (props: any) => JSX.Element;
 
-declare const Field: (props: {
-    value: string;
-    type?: string;
-    select: any;
-}) => JSX.Element;
+declare const Field: (props: FieldProps) => JSX.Element;
 /**
  * @todo Make expandable.
  *
  * @param props
  */
-declare const TextArea: (props: {
-    children: string;
-    onBlur?: any;
-    onChange: any;
-}) => JSX.Element;
+declare const TextArea: (props: TextAreaProps) => JSX.Element;
 
 declare const Select: (props: {
     selections: Array<Selections>;

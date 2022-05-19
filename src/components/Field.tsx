@@ -30,13 +30,17 @@ const StyledTextArea = styled.textarea`
     -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
 `
 
-export const Field = (props: {value: string, type?: string, select: any}) => {
+const enterPressed = (event: any) => {
+    return event.keyCode === 13 
+}
+
+export const Field = (props: FieldProps) => {
 
     return <StyledInput 
+        onKeyDown={ (e) => enterPressed(e) && props.onComplete && props.onComplete() }
         type={ props.type ? props.type : "text"}
         onChange={ (e) => props.select(e.target.value) }
         value={props.value ? props.value : ""} />
-
 
 }
 
@@ -45,11 +49,14 @@ export const Field = (props: {value: string, type?: string, select: any}) => {
  * 
  * @param props 
  */
-export const TextArea = (props: {children: string, onBlur?: any, onChange: any}) => {
+export const TextArea = (props: TextAreaProps) => {
 
     return <StyledTextArea
-            onBlur={e => props.onBlur(e)}
-            onChange={ (e) => props.onChange(e.target.value)}>
+            onBlur={ (e) => props.onComplete && props.onComplete(e.target.value)}
+            onChange={ (e) => {
+                props.onChange && props.onChange(e.target.value)
+                props.select && props.select(e.target.value)
+            }}>
             {props.children}
         </StyledTextArea>
 }
