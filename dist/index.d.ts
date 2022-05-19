@@ -15,6 +15,7 @@ declare const Switch: (props: any) => JSX.Element;
 
 declare const Field: (props: {
     value: string;
+    type?: string;
     select: any;
 }) => JSX.Element;
 /**

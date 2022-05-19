@@ -30,9 +30,10 @@ const StyledTextArea = styled.textarea`
     -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,0.75);
 `
 
-export const Field = (props: {value: string, select: any}) => {
+export const Field = (props: {value: string, type?: string, select: any}) => {
 
     return <StyledInput 
+        type={ props.type ? props.type : "text"}
         onChange={ (e) => props.select(e.target.value) }
         value={props.value ? props.value : ""} />
 

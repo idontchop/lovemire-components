@@ -1,6 +1,7 @@
 /// <reference types="react" />
 export declare const Field: (props: {
     value: string;
+    type?: string;
     select: any;
 }) => JSX.Element;
 /**
