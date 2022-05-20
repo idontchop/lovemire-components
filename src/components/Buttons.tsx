@@ -69,12 +69,14 @@ export const StyledSelectButton = styled.button<styledSelectButtonProps>`
     p {
         font-family: 'Roboto', serif;
         display: inline-block;
+        flex: 1 0 75%;
     }
 
     span {
         font-size: 1.8em;
         padding: 0 2px;
         margin: auto;
+        flex: 0 1 25%;
     }
 
 
@@ -117,10 +119,10 @@ export const SelectButton = (props: selectButtonProps) => {
         onClick={props.onClick}>
         <div style={{display: "flex"}}>
             <p style={{fontSize: '1.2em'}}>{props.children}</p>
-            <span>
-                {props.selected ? !props.noCheckMark && '✔' : 
-                    !props.noCheckBox && <input type="checkbox" />}
-            </span>
+            
+            {props.selected ? !props.noCheckMark && <span>✔</span> : 
+                !props.noCheckBox && <span><input type="checkbox" /></span>}
+
         </div>
     </StyledSelectButton>
 }
