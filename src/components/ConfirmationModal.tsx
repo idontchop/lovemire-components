@@ -76,10 +76,11 @@ const ConfirmationModal = (props: ConfirmationModalProps) => {
                 {props.children}
             </ChildrenDiv>
             <ButtonDiv>
-                <SelectButton noCheckBox selected={okSelected}
-                    onClick={() => {
+                <SelectButton noCheckBox 
+                    selected={okSelected}
+                    onClick={() => {                        
+                        !okSelected && props.onConfirm()
                         setOkSelected(true)
-                        props.onConfirm()
                     }}>
                         Ok
                     </SelectButton>

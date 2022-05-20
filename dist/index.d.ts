@@ -56,4 +56,6 @@ declare const CollaspableMenu: (props: CallaspableMenuProps) => JSX.Element;
 
 declare const ConfigurableButton: (props: ConfigurableButtonProps) => JSX.Element;
 
-export { CollaspableMenu, ConfigurableButton, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, SelectButton, Switch, TextArea };
+declare const ConfirmationModal: (props: ConfirmationModalProps) => JSX.Element;
+
+export { CollaspableMenu, ConfigurableButton, ConfirmationModal, DownArrowButton, Field, LeftArrowButton, NavButton, Rs as RadioSelection, ReloadButton, RightArrowButton, Select, SelectButton, Switch, TextArea };
