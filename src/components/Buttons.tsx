@@ -111,7 +111,10 @@ export const ReloadButton = (props: bigButtonProps) => {
 
 export const SelectButton = (props: selectButtonProps) => {
 
-    return <StyledSelectButton selected={props.selected} onClick={props.onClick}>
+    return <StyledSelectButton 
+        type={ props.type || "button" }
+        selected={props.selected}
+        onClick={props.onClick}>
         <div style={{display: "flex"}}>
             <p style={{fontSize: '1.2em'}}>{props.children}</p>
             <span>

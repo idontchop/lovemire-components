@@ -15,6 +15,7 @@ type bigButtonProps = {
 
 type selectButtonProps = {
     selected: boolean,
+    type?: "button" | "submit" | "reset" | undefined,
     children: string,
     onClick: any,
     className?: string,
