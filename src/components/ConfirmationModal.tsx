@@ -22,6 +22,8 @@ const InnerModal = styled.div`
 
     background-color: ${props => 
         props.theme?.colors?.primary ? props.theme.colors.primary : '#707070'};
+    color: black;
+    font-size: 1.2em;
 
     position: absolute;
         left: 50%;
@@ -82,11 +84,11 @@ const ConfirmationModal = (props: ConfirmationModalProps) => {
                         !okSelected && props.onConfirm()
                         setOkSelected(true)
                     }}>
-                        Ok
+                        {props.okButtonText || 'Ok'}
                     </SelectButton>
                 <SelectButton noCheckBox selected={false}
                     onClick={() => props.onCancel()}>
-                        Cancel
+                        {props.cancelButtonText || 'Cancel'}
                     </SelectButton>
             </ButtonDiv>
             <MessageP>{props.message && props.message}</MessageP>
