@@ -53,6 +53,7 @@ export const TextArea = (props: TextAreaProps) => {
 
     return <StyledTextArea
             onBlur={ (e) => props.onComplete && props.onComplete(e.target.value)}
+            value={props.value}
             onChange={ (e) => {
                 props.onChange && props.onChange(e.target.value)
             }}>

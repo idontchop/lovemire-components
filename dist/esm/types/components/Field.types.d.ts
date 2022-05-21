@@ -5,7 +5,8 @@ declare type FieldProps = {
     onComplete?: any;
 };
 declare type TextAreaProps = {
-    children: any;
+    children?: any;
+    value?: string;
     onChange: any;
     onComplete?: any;
 };

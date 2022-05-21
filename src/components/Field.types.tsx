@@ -12,7 +12,8 @@ type FieldProps = {
 }
 
 type TextAreaProps = {
-    children: any,
+    children?: any,
+    value?: string,
     onChange: any,
     /* Same as select */
     onComplete?: any
