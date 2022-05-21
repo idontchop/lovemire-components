@@ -56,7 +56,6 @@ export const TextArea = (props: TextAreaProps) => {
             value={props.value}
             onChange={ (e) => {
                 props.onChange && props.onChange(e.target.value)
-            }}>
-            {props.children}
-        </StyledTextArea>
+            }} />
+            
 }
