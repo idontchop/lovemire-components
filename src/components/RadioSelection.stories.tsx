@@ -8,8 +8,10 @@ let choice = false
 export const Standard =  {
   colors: {
       // abstract
-      primary: "#ebe6e6",
-      secondary: "#707070",
+      primary: "#ebe6e6", // pinkish
+      primary2: "#CAB5B5", // heavier pink
+      secondary: "#707070", // dark gray
+      tertiary: "#D4D4D4", // light gray
       text: "#282c34",
       test: 'purple',
 
