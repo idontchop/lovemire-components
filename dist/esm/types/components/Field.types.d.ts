@@ -4,7 +4,9 @@ declare type FieldProps = {
     select: any;
     onComplete?: any;
 };
-declare type TextAreaProps = FieldProps & {
-    children: any;
+declare type TextAreaProps = {
+    children?: any;
+    value?: string;
     onChange: any;
+    onComplete?: any;
 };

@@ -14,7 +14,7 @@ const Bar = styled.span<SelectDivProps>`
     height: 80%;
     background-color: ${props => props.selected ? 
         props.theme?.selected ? props.theme.selected : '#cab5b5' :
-        props.theme?.unselected ? props.theme.unselected : '#707070'};;
+        props.theme?.unselected ? props.theme.unselected : '#707070'};
     border-radius: 500px;
     position: relative;
     top: 50%;

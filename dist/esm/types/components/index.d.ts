@@ -6,3 +6,4 @@ export { NavButton } from "./NavButton";
 export { LeftArrowButton, RightArrowButton, DownArrowButton, ReloadButton, SelectButton } from "./Buttons";
 export { CollaspableMenu } from "./CollaspableMenu";
 export { ConfigurableButton } from "./ConfigurableButton";
+export { default as ConfirmationModal } from "./ConfirmationModal";

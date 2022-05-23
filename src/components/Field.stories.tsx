@@ -29,10 +29,15 @@ export const BigInput = () => {
 
   const [value, setvalue] = React.useState("TextArea")
 
+
+
     return <ThemeProvider theme={Standard}>
       <div style={{backgroundColor: 'aqua', overflow: 'none'}}>
       <p>Text Before</p>
-      <TextArea onChange={ (e:any) => setvalue(e.target.value)}>{value}</TextArea>
+      <button onClick={ () => setvalue("Message 1")}>Big</button>
+      <button onClick={ () => setvalue("2")}>2</button>
+      <button onClick={ () => setvalue("")}>clear</button>
+      <TextArea onChange={ (e:any) => setvalue(e)} value={value}>{value}</TextArea>
       <p>TextAfter, expandable over?</p>
       </div>
     </ThemeProvider>

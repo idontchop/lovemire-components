@@ -11,8 +11,10 @@ type FieldProps = {
         on Enter press */
 }
 
-type TextAreaProps = FieldProps & {
-    children: any,
+type TextAreaProps = {
+    children?: any,
+    value?: string,
     onChange: any,
     /* Same as select */
+    onComplete?: any
 }

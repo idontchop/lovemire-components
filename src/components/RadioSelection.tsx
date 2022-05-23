@@ -33,7 +33,11 @@ const SelectDiv = styled.div<SelectDivProps>`
 
 `
 
-// TODO: selection should take text or JSX
+/**
+ * @todo Still produces a unique key error in some cases, numbers as name?
+ * @param props 
+ * @returns 
+ */
 const Rs = (props: {selections: Array<Selections>, select: any}) => {
 
     if(!props?.selections || !props?.select) {
