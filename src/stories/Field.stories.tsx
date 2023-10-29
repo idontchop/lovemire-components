@@ -1,15 +1,14 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import {Field, TextArea} from "./Field";
-import { Standard } from "./RadioSelection.stories";
-import { ThemeProvider } from "styled-components";
+import { StoryFn } from "@storybook/react";
+import {Field, TextArea} from "../components/Field";
+import '../theme/style';
 
 export default {
   title: "Field",
   component: Field,
-} as ComponentMeta<typeof Field>;
+};
 
-const Template: ComponentStory<typeof Field> = (args) => <Field {...args} />;
+const Template: StoryFn<typeof Field> = (args) => <Field {...args} />;
 
 export const HelloWorld = Template.bind({});
 HelloWorld.args = {
@@ -20,18 +19,14 @@ HelloWorld.args = {
 export const Input = () => {
 
   const [value,setValue] = React.useState("User")
-  return <ThemeProvider theme={Standard}>
-    <Field value={value} select={(e: string) => {console.log("clicked",e); setValue(e);}} />
-  </ThemeProvider>
+  return <Field value={value} select={(e: string) => {console.log("clicked",e); setValue(e);}} />
 }
 
 export const BigInput = () => {
 
   const [value, setvalue] = React.useState("TextArea")
 
-
-
-    return <ThemeProvider theme={Standard}>
+    return <>
       <div style={{backgroundColor: 'aqua', overflow: 'none'}}>
       <p>Text Before</p>
       <button onClick={ () => setvalue("Message 1")}>Big</button>
@@ -40,5 +35,5 @@ export const BigInput = () => {
       <TextArea onChange={ (e:any) => setvalue(e)} value={value}>{value}</TextArea>
       <p>TextAfter, expandable over?</p>
       </div>
-    </ThemeProvider>
+    </>
 }

@@ -1,66 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react'
-import styled, {keyframes, css} from 'styled-components'
+import React, {useState, useEffect} from 'react'
 import { SelectButton } from './Buttons'
-
-const OuterModal = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.5);
-    z-index: 98;
-
-`
-
-const InnerModal = styled.div`
-
-    z-index: 99;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-    box-shadow: 3px 3px 17px 3px #000000;
-
-    background-color: ${props => 
-        props.theme?.colors?.primary ? props.theme.colors.primary : '#707070'};
-    color: black;
-    font-size: 1.2em;
-
-    position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-`
-
-const ButtonDiv = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin: 15px 0 0 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    button {
-        flex: 1;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    p {
-        text-align: center;
-    }
-`
-
-const ChildrenDiv = styled.div`
-    max-width: 180px;
-    max-height: 180px;
-`
-
-const MessageP = styled.p`
-    font-size: 0.7em;
-    padding: 0;
-    margin: 5px 0;
-
-`
 
 const ConfirmationModal = (props: ConfirmationModalProps) => {
 
@@ -72,28 +11,33 @@ const ConfirmationModal = (props: ConfirmationModalProps) => {
         setOkSelected(false)
     },[props])
 
-    return <OuterModal onClick={ (e) => {e.stopPropagation(); props.onCancel();} }>
-        <InnerModal onClick= { (e) => e.stopPropagation()}>
-            <ChildrenDiv>
-                {props.children}
-            </ChildrenDiv>
-            <ButtonDiv>
-                <SelectButton noCheckBox 
-                    selected={okSelected}
-                    onClick={() => {                        
-                        !okSelected && props.onConfirm()
-                        setOkSelected(true)
-                    }}>
-                        {props.okButtonText || 'Ok'}
-                    </SelectButton>
-                <SelectButton noCheckBox selected={false}
-                    onClick={() => props.onCancel()}>
-                        {props.cancelButtonText || 'Cancel'}
-                    </SelectButton>
-            </ButtonDiv>
-            <MessageP>{props.message && props.message}</MessageP>
-        </InnerModal>
-    </OuterModal>
+    return (
+        <div className='lm-outer-modal'
+            onClick={ (e) => {e.stopPropagation(); props.onCancel();} }>
+            <div className='lm-inner-modal' 
+                onClick= { (e) => e.stopPropagation()}>
+                <div style={{maxWidth: '180px', maxHeight: '180px'}}>
+                    {props.children}
+                </div>
+                <div className='lm-confirmation'>
+                    <SelectButton noCheckBox 
+                        selected={okSelected}
+                        onClick={() => {                        
+                            !okSelected && props.onConfirm()
+                            setOkSelected(true)
+                        }}>
+                            {props.okButtonText || 'Ok'}
+                        </SelectButton>
+                    <SelectButton noCheckBox selected={false}
+                        onClick={() => props.onCancel()}>
+                            {props.cancelButtonText || 'Cancel'}
+                        </SelectButton>
+                </div>
+                <div className='lm-confirmation-footer'>
+                    <p>{props.message && props.message}</p>
+                </div>
+            </div>
+        </div>)
 
 }
 

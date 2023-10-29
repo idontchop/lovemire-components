@@ -4,7 +4,3 @@ export type Selections = {
     title: string
     value?: string | number
 }
-
-export interface SelectDivProps {
-    selected?: boolean;
-}

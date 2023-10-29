@@ -1,6 +1,5 @@
 import React from 'react'
-import ConfirmationModal from './ConfirmationModal'
-import styled from 'styled-components'
+import ConfirmationModal from '../components/ConfirmationModal'
 import { Standard } from './RadioSelection.stories'
 import { ThemeProvider } from 'styled-components'
 
@@ -9,9 +8,6 @@ export default {
     title: 'ConfirmationModal',
     component: ConfirmationModal
 }
-
-
-
 
 export const ConfirmationModalStoryLoad = () => {
 
